@@ -16,7 +16,7 @@ This is my answer test
 
  
 ## Result 
-- Note:
+* Notes:
 + I am using Firebase for my database and I find the cookie mechanism in Flutter to be not very prominent. As a result, I have resorted to using a device ID instead. However, it is important to note that using a device ID may have potential drawbacks, such as if a user switches devices or clears their device data, their ID may change, which could result in lost data or errors in the app.
 + If you still want me to use cookies I can still follow your request. Thank
 
