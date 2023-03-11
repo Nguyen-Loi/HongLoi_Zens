@@ -3,3 +3,7 @@ Hello, my name is Loi and I'm interested in joining the Flutter team at ZENS as 
 As an intern, I'm excited about the opportunity to work alongside a team of talented developers at ZENS and to gain hands-on experience building mobile apps. I'm a quick learner, a great communicator, and I thrive in collaborative environments. I'm confident that my enthusiasm, work ethic, and willingness to learn make me a great fit for the intern position on the Flutter team at ZENS.
 
 Thank you for considering my application. I look forward to the opportunity to contribute to the company's mission and to learn and grow as a developer.
+
+Link to answer the interview: 
+- Algorithm: https://github.com/Nguyen-Loi/HongLoi_Zens/tree/algorithm
+- Mobile: https://github.com/Nguyen-Loi/HongLoi_Zens/tree/master
