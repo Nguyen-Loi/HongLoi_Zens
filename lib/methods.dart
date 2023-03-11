@@ -17,7 +17,7 @@ class Methods {
 
   List<int> get listOdd => listNumber.where((e) => e % 2 != 0).toList();
   
-  ///Result min man: 10 14
+  ///Result min Max: 10 14
   String get minMaxSumResult {
     int sumMinium = total - maxNumber;
     int sumMaxium = total - minNumber;
