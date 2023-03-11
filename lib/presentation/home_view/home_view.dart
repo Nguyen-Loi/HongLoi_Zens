@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter_zens/presentation/home_view/components/home_view_base_text.dart';
-import 'package:test_flutter_zens/presentation/home_view/components/home_view_button.dart';
+import 'package:test_flutter_zens/presentation/home_view/components/home_view_body.dart';
 import 'package:test_flutter_zens/presentation/home_view/components/home_view_footer.dart';
 import 'package:test_flutter_zens/presentation/resources/assets_manager.dart';
 import 'package:test_flutter_zens/presentation/resources/color_manager.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,34 +25,11 @@ class _HomeViewState extends State<HomeView> {
 
   Widget body() {
     return Column(
-      children: [
+      children: const [
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-            child: Column(
-              children: [
-                Expanded(child: HomeViewBaseText('chào bạn' * 20)),
-                //Row button
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    HomeViewButton(
-                        text: 'This is Funny!',
-                        onPressed: () {},
-                        color: ColorManager.blue),
-                    const SizedBox(width: 24),
-                    HomeViewButton(
-                      text: 'This is not Funny.',
-                      onPressed: () {},
-                      color: ColorManager.green,
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
+          child: HomeViewBody(),
         ),
-        const HomeViewFooter()
+        HomeViewFooter()
       ],
     );
   }
@@ -103,10 +75,14 @@ class _HomeViewState extends State<HomeView> {
                 children: [
                   HomeViewBaseText(
                     'Handicrafted by',
-                    color: ColorManager.black,
+                    color: ColorManager.grey,
                   ),
                   const SizedBox(height: 8),
-                  HomeViewBaseText('Jim HLS', color: ColorManager.black)
+                  HomeViewBaseText(
+                    'Jim HLS',
+                    color: ColorManager.black,
+                    fontSize: 14,
+                  )
                 ],
               ),
               const SizedBox(

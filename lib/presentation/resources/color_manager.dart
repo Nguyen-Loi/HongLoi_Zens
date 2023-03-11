@@ -6,6 +6,7 @@ class ColorManager {
   static Color black = HexColor.fromHex("#646464");
   static Color grey = HexColor.fromHex("#646464");
   static Color blue = HexColor.fromHex("#2c7edb");
+  static Color red = HexColor.fromHex("#FF0000");
 
 }
 
