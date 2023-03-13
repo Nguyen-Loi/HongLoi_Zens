@@ -4,13 +4,15 @@ class HomeViewBaseText extends StatelessWidget {
   final String text;
   final double fontSize;
   final Color? color;
-  const HomeViewBaseText(this.text,{super.key, this.fontSize=13, this.color});
+  final TextAlign? textAlign;
+  const HomeViewBaseText(this.text,{super.key, this.fontSize=13, this.color, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: TextStyle(fontSize: fontSize, color: color),
+      textAlign: textAlign,
     );
   }
 }

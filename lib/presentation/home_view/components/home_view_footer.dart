@@ -21,9 +21,13 @@ class HomeViewFooter extends StatelessWidget {
           HomeViewBaseText(
             strContent,
             color: ColorManager.grey,
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
-          const HomeViewBaseText('Copyright 2021 HLS'),
+          HomeViewBaseText(
+            'Copyright 2021 HLS',
+            color: ColorManager.blackNormal,
+          ),
         ],
       ),
     );

@@ -14,6 +14,7 @@ class HomeView extends StatelessWidget {
       appBar: appBar(),
       body: Column(
         children: [
+          const SizedBox(height: 8),
           banner(),
           Expanded(
             child: body(),
@@ -38,16 +39,16 @@ class HomeView extends StatelessWidget {
     return Container(
       color: ColorManager.green,
       width: double.infinity,
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.only(top: 40, bottom: 32),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           HomeViewBaseText(
             'A Joke a day keep the doctor away',
             color: ColorManager.white,
-            fontSize: 24,
+            fontSize: 17,
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 24),
           HomeViewBaseText(
               'If you joke wrong away, your teeth have to pay. (Serious)',
               color: ColorManager.white)
@@ -63,11 +64,9 @@ class HomeView extends StatelessWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-              radius: 18,
-              child: Image.asset(
-                ImageAssets.logo,
-              )),
+          icon(
+            ImageAssets.logo,
+          ),
           Row(
             children: [
               Column(
@@ -77,10 +76,10 @@ class HomeView extends StatelessWidget {
                     'Handicrafted by',
                     color: ColorManager.grey,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 2),
                   HomeViewBaseText(
                     'Jim HLS',
-                    color: ColorManager.black,
+                    color: ColorManager.blackBold,
                     fontSize: 14,
                   )
                 ],
@@ -88,11 +87,19 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 width: 8,
               ),
-              CircleAvatar(radius: 15, child: Image.asset(ImageAssets.user)),
+              icon(ImageAssets.user),
             ],
           )
         ],
       ),
+    );
+  }
+
+  Widget icon(String assetImage) {
+    return Image.asset(
+      assetImage,
+      width: 50,
+      height: 50,
     );
   }
 }

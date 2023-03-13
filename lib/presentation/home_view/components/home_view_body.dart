@@ -31,7 +31,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 40),
       child: controller.list.isEmpty
           ? FutureBuilder(
               future: controller.loadData(),
@@ -70,6 +70,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         Expanded(
           child: HomeViewBaseText(
             list[controller.currentIndex].title,
+            color: ColorManager.black,
           ),
         ),
         //Row button
